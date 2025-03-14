@@ -1,36 +1,64 @@
 // Navigation functionality
 document.addEventListener('DOMContentLoaded', function() {
-  // Set active nav link based on current page
+  const menuButton = document.querySelector('.menu-button');
+  const navMenu = document.querySelector('.nav-menu');
+  
+  // Function to close mobile menu
+  function closeMobileMenu() {
+    navMenu.classList.remove('w--open');
+  }
+
+  // Toggle mobile menu
+  if (menuButton && navMenu) {
+    menuButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      navMenu.classList.toggle('w--open');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const isClickInside = navMenu.contains(event.target) || menuButton.contains(event.target);
+      if (!isClickInside && navMenu.classList.contains('w--open')) {
+        closeMobileMenu();
+      }
+    });
+  }
+
+  // Handle active nav links
   const currentPath = window.location.pathname;
   const navLinks = document.querySelectorAll('.nav-link');
   
   navLinks.forEach(link => {
+    // Set active state
     const linkPath = link.getAttribute('href');
-    
-    // Check if the current path matches the link path or ends with it
-    if (currentPath === linkPath || currentPath.endsWith(linkPath)) {
+    if (currentPath.endsWith(linkPath)) {
       link.classList.add('active');
-      const underline = link.querySelector('.link-underline');
-      if (underline) {
-        underline.style.width = '100%';
-      }
     }
     
-    // Add hover effects
-    link.addEventListener('mouseenter', function() {
-      const underline = this.querySelector('.link-underline');
-      if (underline) {
-        underline.style.width = '100%';
+    // Close mobile menu when link is clicked
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 768) {
+        closeMobileMenu();
       }
     });
-    
-    link.addEventListener('mouseleave', function() {
-      if (!this.classList.contains('active')) {
-        const underline = this.querySelector('.link-underline');
-        if (underline) {
-          underline.style.width = '0';
-        }
+  });
+
+  // Handle window resize
+  let resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      if (window.innerWidth > 768) {
+        closeMobileMenu();
       }
-    });
+    }, 250);
+  });
+
+  // Handle escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeMobileMenu();
+    }
   });
 }); 

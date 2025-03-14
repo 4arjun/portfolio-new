@@ -12,6 +12,8 @@
     <!-- Stylesheets -->
     <link href="../css/modern-style.css" rel="stylesheet" type="text/css" />
     <link href="./projects-detail.css" rel="stylesheet" type="text/css" />
+    <link href="../css/nav.css" rel="stylesheet" type="text/css" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     
@@ -59,41 +61,44 @@
     <!-- Navigation -->
     <div data-collapse="small" data-animation="default" class="fixed-nav w-nav">
       <div class="container nav-container w-container">
-        <a href="../index.html" class="brand w-nav-brand">
-          <img id="logoImage" src="../imgg/logoBlack.svg" loading="lazy" alt="Arjun Ajith Logo" class="brand-pic" />
-        </a>
-        
-        <nav role="navigation" class="nav-menu w-nav-menu">
-          <a href="../about/index.html" class="nav-link w-inline-block">
-            <div class="nav-link-text">About</div>
-            <div class="link-underline" style="width: 0; height: 2px; position: absolute; bottom: 0; left: 0;"></div>
-          </a>
-          <a href="../resume/resume.pdf" class="nav-link w-inline-block">
-            <div class="nav-link-text">Resume</div>
-            <div class="link-underline" style="width: 0; height: 2px; position: absolute; bottom: 0; left: 0;"></div>
-          </a>
-          <a href="../about/projects.html" class="nav-link w-inline-block active">
-            <div class="nav-link-text">Projects</div>
-            <div class="link-underline" style="width: 100%; height: 2px; position: absolute; bottom: 0; left: 0;"></div>
-          </a>
-          <a href="https://github.com/4arjun" class="nav-link w-inline-block">
-            <div class="nav-link-text">Github</div>
-            <div class="link-underline" style="width: 0; height: 2px; position: absolute; bottom: 0; left: 0;"></div>
-          </a>
-        </nav>
-        
         <label class="switch">
           <input type="checkbox" onclick="toggleDarkMode()">
           <span class="slider round"></span>
         </label>
         
-        <div class="menu-button w-nav-button">
-          <img id="menu-button" src="../imgg/menu-icon-black.svg" loading="lazy" alt="Menu" width="24" height="24" />
-        </div>
+        <nav role="navigation" class="nav-menu w-nav-menu">
+          <a href="../about/index.html" class="nav-link w-inline-block">
+            <div class="nav-link-text">About</div>
+            <div class="link-underline"></div>
+          </a>
+          <a href="../resume/index.html" class="nav-link w-inline-block">
+            <div class="nav-link-text">Resume</div>
+            <div class="link-underline"></div>
+          </a>
+          <a href="../about/projects.html" class="nav-link w-inline-block">
+            <div class="nav-link-text">Projects</div>
+            <div class="link-underline"></div>
+          </a>
+          <a href="https://github.com/4arjun" class="nav-link w-inline-block">
+            <div class="nav-link-text">Github</div>
+            <div class="link-underline"></div>
+          </a>
+
+          <div class="pointer-events w-embed">
+            <style>
+              .cursor {
+                pointer-events: none;
+              }
+            </style>
+          </div>
+        </nav>
         
-        <div class="nav-bg-white"></div>
+        <div class="menu-button w-nav-button">
+          <img id="menu-button" src="../imgg/menu-icon-black.svg" loading="lazy" alt="" />
+        </div>
       </div>
-    </div>
+      <div class="nav-bg-white"></div>
+  </div>
 
     <!-- Projects Header -->
     <div class="section projects-header">
@@ -402,7 +407,31 @@
         if (menuButton && navMenu) {
           menuButton.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             navMenu.classList.toggle('w--open');
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+              const isClickInside = navMenu.contains(event.target) || 
+                                  menuButton.contains(event.target);
+              if (!isClickInside && navMenu.classList.contains('w--open')) {
+                navMenu.classList.remove('w--open');
+              }
+            });
+          });
+
+          // Close menu when window is resized
+          window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+              navMenu.classList.remove('w--open');
+            }
+          });
+
+          // Close menu when escape key is pressed
+          document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('w--open')) {
+              navMenu.classList.remove('w--open');
+            }
           });
         }
         
