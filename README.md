@@ -22,7 +22,7 @@ For major changes, please open an issue first to discuss what you would like to 
 
 ---
 
-## Hi there, I'm Adam 👋
+## Hi there, I'm Arjun👋
 
 🚀 **About Me**
 
@@ -33,6 +33,6 @@ For major changes, please open an issue first to discuss what you would like to 
 
 ## 🔗 Links
 
-- [LinkedIn](https://www.linkedin.com)
+- [LinkedIn](https://www.linkedin.com/in/4arjun/)
 - [Twitter](www.linkedin.com/in/4arjun)
 - [Instagram](https://www.instagram.com/arjunajith__/)
