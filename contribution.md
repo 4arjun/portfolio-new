@@ -14,13 +14,13 @@
 - Using git on your local machine. Do this to download the forked copy of this repo to your computer
 
 ```
-  git clone https://github.com/adamsyy/portfolio.git
+  git clone https://github.com/4arjun/portfolio-new.git
 ```
 
 - switch to the cloned folder. This can be done with Gitbash or the integrated terminal in the VSCode editor
 
 ```
-  cd portfolio
+  cd portfolio-new
 ```
 
 - Make a new branch. Your name would make a good branch because it's unique
