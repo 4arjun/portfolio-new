@@ -14,7 +14,7 @@ Disallow: /imgg/
 Disallow: *.pdf$
 
 # Sitemap location
-Sitemap: https://arjunajith.netlify.app/sitemap.xml
+Sitemap: https://www.arjunajith.me/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1 
