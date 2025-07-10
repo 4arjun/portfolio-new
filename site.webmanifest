@@ -4,14 +4,14 @@
   "description": "Portfolio of Arjun Ajith - Full Stack Developer specializing in React and Django",
   "icons": [
     {
-      "src": "imgg/logoBlack.svg",
+      "src": "imgg/favicon-192x192.png",
       "sizes": "192x192",
-      "type": "image/svg+xml"
+      "type": "image/png"
     },
     {
-      "src": "imgg/logoBlack.svg",
+      "src": "imgg/favicon-192x192.png",
       "sizes": "512x512",
-      "type": "image/svg+xml"
+      "type": "image/png"
     }
   ],
   "start_url": "/",

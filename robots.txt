@@ -7,7 +7,10 @@ Allow: /about/
 Allow: /resume/
 Allow: /projects/
 
-# Allow logo files for search engines
+# Allow favicon and logo files for search engines
+Allow: /imgg/favicon-48x48.png
+Allow: /imgg/favicon-96x96.png
+Allow: /imgg/favicon-192x192.png
 Allow: /imgg/logoBlack.svg
 Allow: /imgg/logoWhite.svg
 Allow: /imgg/pp.jpg
@@ -17,6 +20,9 @@ Disallow: /css/
 Disallow: /js/
 Disallow: /imgg/*.jpg$
 Disallow: /imgg/*.png$
+Allow: /imgg/favicon-48x48.png
+Allow: /imgg/favicon-96x96.png
+Allow: /imgg/favicon-192x192.png
 Allow: /imgg/logoBlack.svg
 Allow: /imgg/logoWhite.svg
 Allow: /imgg/pp.jpg
