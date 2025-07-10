@@ -7,10 +7,19 @@ Allow: /about/
 Allow: /resume/
 Allow: /projects/
 
-# Block unnecessary files
+# Allow logo files for search engines
+Allow: /imgg/logoBlack.svg
+Allow: /imgg/logoWhite.svg
+Allow: /imgg/pp.jpg
+
+# Block other unnecessary files but allow essential images
 Disallow: /css/
 Disallow: /js/
-Disallow: /imgg/
+Disallow: /imgg/*.jpg$
+Disallow: /imgg/*.png$
+Allow: /imgg/logoBlack.svg
+Allow: /imgg/logoWhite.svg
+Allow: /imgg/pp.jpg
 Disallow: *.pdf$
 
 # Sitemap location
