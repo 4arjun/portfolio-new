@@ -850,3 +850,127 @@ a:hover ~ .cursor .cursor-small-circle {
 a:hover ~ .cursor .cursor-arrow {
   opacity: 1;
 }
+/* === Experience Section === */
+.experience-section {
+  padding: 4rem 0;
+  position: relative;
+}
+
+.experience-section .section-title {
+  margin-bottom: 2rem;
+}
+
+.experience-section .bg-text {
+  position: absolute;
+  top: 1.5rem;
+  right: 5%;
+  font-size: 3.5rem;
+  font-weight: 800;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+/* Card */
+.experience-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.75rem 1.9rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+.dark-mode .experience-card {
+  background: #020617;
+  border-color: rgba(148, 163, 184, 0.35);
+}
+
+/* Header row */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.experience-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.experience-header h4 {
+  margin: 0.2rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.dark-mode .experience-header h4 {
+  color: #cbd5f5;
+}
+
+.experience-date span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.dark-mode .experience-date span {
+  color: #e5e7eb;
+}
+
+/* Content */
+.experience-content {
+  margin-top: 0.25rem;
+}
+
+.experience-location {
+  margin: 0 0 0.7rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.dark-mode .experience-location {
+  color: #e5e7eb;
+}
+
+/* List for Gumroad */
+.experience-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.experience-list li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* WNE3 paragraph so it visually matches list text */
+.experience-card .experience-content > p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0.35rem 0 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-card {
+    padding: 1.4rem 1.3rem;
+  }
+
+  .experience-section .bg-text {
+    font-size: 2.8rem;
+    right: 1rem;
+  }
+}
