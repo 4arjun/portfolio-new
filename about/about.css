@@ -159,6 +159,24 @@ body.dark-mode .bg-text {
   padding: 2rem 0 4rem;
 }
 
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 0.85rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--primary-color);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body.dark-mode .eyebrow {
+  background: rgba(59, 130, 246, 0.18);
+  color: #bfdbfe;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -191,15 +209,25 @@ body.dark-mode .bg-text {
 }
 
 .profile-content h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
-  color: var(--primary-color);
+  color: var(--text-color);
+  line-height: 1.15;
 }
 
 .profile-content p {
   font-size: 1.1rem;
   line-height: 1.7;
-  margin-bottom: 2rem;
+  margin-bottom: 1.15rem;
+  color: #475569;
+}
+
+body.dark-mode .profile-content h2 {
+  color: var(--dark-text);
+}
+
+body.dark-mode .profile-content p {
+  color: #cbd5e1;
 }
 
 .social-links {
@@ -248,8 +276,23 @@ body.dark-mode .about-skills {
 
 .about-skills h2 {
   font-size: 2rem;
-  margin-bottom: 2rem;
-  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+}
+
+body.dark-mode .about-skills h2 {
+  color: var(--dark-text);
+}
+
+.skills-intro {
+  margin-bottom: 1.6rem;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+body.dark-mode .skills-intro {
+  color: #cbd5e1;
 }
 
 .skill-item {
@@ -305,7 +348,7 @@ body.dark-mode .experience-section {
 .section-title {
   font-size: 2.5rem;
   font-weight: 800;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -313,6 +356,20 @@ body.dark-mode .experience-section {
   text-fill-color: transparent;
   position: relative;
   z-index: 2;
+}
+
+.section-intro {
+  max-width: 760px;
+  margin: 0 0 2rem;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: #64748b;
+  position: relative;
+  z-index: 2;
+}
+
+body.dark-mode .section-intro {
+  color: #cbd5e1;
 }
 
 .experience-card {
@@ -378,12 +435,12 @@ body.dark-mode .experience-date {
 
 /* Achievements Section */
 .achievements-section {
-  background: var(--light-bg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(37, 99, 235, 0.03) 100%);
   padding: 4rem 0;
 }
 
 body.dark-mode .achievements-section {
-  background: var(--dark-bg);
+  background: linear-gradient(180deg, rgba(17, 24, 39, 0) 0%, rgba(59, 130, 246, 0.06) 100%);
 }
 
 .achievements-grid {
@@ -472,50 +529,89 @@ body.dark-mode .achievement-description {
 .tech-stack-section {
   padding: 4rem 0;
   position: relative;
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.04) 0%, rgba(124, 58, 237, 0.02) 100%);
+}
+
+body.dark-mode .tech-stack-section {
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.35) 0%, rgba(17, 24, 39, 0.15) 100%);
 }
 
 .tech-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 760px;
+  margin: 3rem auto 0;
 }
 
 .tech-card {
+  flex: 0 1 220px;
   background-color: var(--light-card);
   border-radius: 1rem;
-  padding: 2rem;
+  min-height: 210px;
+  padding: 1.75rem 1.5rem;
   text-align: center;
   box-shadow: var(--shadow-md);
+  border: 1px solid rgba(148, 163, 184, 0.18);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-body.dark-mode .tech-card {
-  background-color: var(--dark-card);
-}
-
-.tech-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-lg);
-}
-
-.tech-icon-container {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1.5rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+body.dark-mode .tech-card {
+  background-color: var(--dark-card);
+  border-color: rgba(148, 163, 184, 0.25);
+}
+
+.tech-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.tech-icon-container {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.09), rgba(124, 58, 237, 0.08));
+  border: 1px solid rgba(99, 102, 241, 0.12);
+  padding: 0.9rem;
+}
+
+body.dark-mode .tech-icon-container {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.16), rgba(124, 58, 237, 0.14));
+  border-color: rgba(147, 197, 253, 0.18);
+}
+
 .tech-icon {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
+.tech-card-label {
+  display: inline-block;
+  margin-bottom: 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+body.dark-mode .tech-card-label {
+  color: #cbd5e1;
+}
+
 .tech-card h3 {
-  font-size: 1.25rem;
+  margin: 0;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
@@ -577,10 +673,12 @@ body.dark-mode .timeline-dot {
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: var(--shadow-md);
+  border: 1px solid rgba(148, 163, 184, 0.18);
 }
 
 body.dark-mode .timeline-content {
   background-color: var(--dark-card);
+  border-color: rgba(148, 163, 184, 0.25);
 }
 
 .timeline-header {
@@ -614,6 +712,40 @@ body.dark-mode .timeline-date {
   font-size: 1rem;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  color: #64748b;
+  line-height: 1.7;
+}
+
+body.dark-mode .timeline-content p {
+  color: #cbd5e1;
+}
+
+.timeline-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.timeline-metrics span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  color: var(--primary-color);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+body.dark-mode .timeline-metrics span {
+  background: rgba(59, 130, 246, 0.14);
+  border-color: rgba(147, 197, 253, 0.18);
+  color: #bfdbfe;
 }
 
 /* Contact CTA */
@@ -710,6 +842,10 @@ body.dark-mode .copyright {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
+  .profile-content h2 {
+    font-size: 2.4rem;
+  }
   
   .timeline-header {
     flex-direction: column;
@@ -756,7 +892,12 @@ body.dark-mode .copyright {
   }
   
   .tech-grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .tech-card {
+    flex-basis: calc(50% - 0.5rem);
+    min-height: 180px;
   }
   
   .cta-content h2 {
@@ -780,8 +921,9 @@ body.dark-mode .copyright {
     font-size: 2rem;
   }
   
-  .tech-grid {
-    grid-template-columns: 1fr;
+  .tech-card {
+    flex-basis: 100%;
+    min-height: 160px;
   }
   
   .timeline {
@@ -860,6 +1002,24 @@ a:hover ~ .cursor .cursor-arrow {
   margin-bottom: 2rem;
 }
 
+.achievements-section .section-title,
+.tech-stack-section .section-title,
+.education-section .section-title {
+  margin-bottom: 1rem;
+}
+
+.experience-intro {
+  max-width: 760px;
+  margin: 0 0 2rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #475569;
+}
+
+.dark-mode .experience-intro {
+  color: #cbd5e1;
+}
+
 .experience-section .bg-text {
   position: absolute;
   top: 1.5rem;
@@ -911,6 +1071,30 @@ a:hover ~ .cursor .cursor-arrow {
   color: #cbd5f5;
 }
 
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+}
+
+.experience-tags span {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #1d4ed8;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+}
+
+.dark-mode .experience-tags span {
+  color: #bfdbfe;
+  background: rgba(59, 130, 246, 0.14);
+  border-color: rgba(147, 197, 253, 0.18);
+}
+
 .experience-date span {
   font-size: 0.9rem;
   font-weight: 500;
@@ -930,6 +1114,8 @@ a:hover ~ .cursor .cursor-arrow {
 .experience-location {
   margin: 0 0 0.7rem;
   font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   color: #6b7280;
 }
 
@@ -949,6 +1135,11 @@ a:hover ~ .cursor .cursor-arrow {
 .experience-list li {
   font-size: 0.95rem;
   line-height: 1.5;
+  color: #334155;
+}
+
+.dark-mode .experience-list li {
+  color: #e2e8f0;
 }
 
 /* WNE3 paragraph so it visually matches list text */
@@ -965,6 +1156,11 @@ a:hover ~ .cursor .cursor-arrow {
     align-items: flex-start;
   }
 
+  .experience-intro {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
   .experience-card {
     padding: 1.4rem 1.3rem;
   }
@@ -972,5 +1168,9 @@ a:hover ~ .cursor .cursor-arrow {
   .experience-section .bg-text {
     font-size: 2.8rem;
     right: 1rem;
+  }
+
+  .experience-tags {
+    margin-top: 0.75rem;
   }
 }

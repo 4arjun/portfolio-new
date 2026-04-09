@@ -161,8 +161,10 @@
                         <img src="../imgg/pp (2).jpg" alt="Arjun Ajith" class="profile-image" />
                     </div>
                     <div class="profile-content">
-                        <h2>Hello!</h2>
-                        <p>My name is Arjun. A third year computer science student from Model Engineering College, Thrikkakara. Currently kneeling down to the dart side.</p>
+                        <span class="eyebrow">About Me</span>
+                        <h2>Building web products with strong backend thinking and polished user experience.</h2>
+                        <p>I’m Arjun Ajith, a Computer Science student at Model Engineering College who enjoys turning ideas into fast, reliable, and well-crafted digital products. My work sits at the intersection of backend engineering, frontend execution, and product-minded problem solving.</p>
+                        <p>I’m especially interested in scalable web systems, clean developer experience, and building interfaces that feel simple even when the underlying engineering is complex.</p>
                         
                         <div class="social-links">
                             <a href="mailto:arjunajith440@gmail.com" class="social-link" title="Email">
@@ -189,11 +191,13 @@
                 
                 <!-- Skills Section -->
                 <div class="about-skills animate__animated animate__fadeInUp animate__delay-1s">
-                    <h2>My Skills</h2>
+                    <span class="eyebrow">What I Bring</span>
+                    <h2>Core Strengths</h2>
+                    <p class="skills-intro">A balanced mix of product sense, backend depth, and modern frontend execution.</p>
                     
                     <div class="skill-item">
                         <div class="skill-header">
-                            <h4>Web Development</h4>
+                            <h4>Frontend Systems</h4>
                             <span>75%</span>
                         </div>
                         <div class="skill-bar">
@@ -203,7 +207,7 @@
                     
                     <div class="skill-item">
                         <div class="skill-header">
-                            <h4>Backend Development</h4>
+                            <h4>Backend Engineering</h4>
                             <span>90%</span>
                         </div>
                         <div class="skill-bar">
@@ -213,7 +217,7 @@
                     
                     <div class="skill-item">
                         <div class="skill-header">
-                            <h4>Cloud Services</h4>
+                            <h4>Deployment & Infrastructure</h4>
                             <span>70%</span>
                         </div>
                         <div class="skill-bar">
@@ -230,49 +234,46 @@
             <div class="container">
             <h2 class="section-title animate__animated animate__fadeIn">Experience</h2>
             <div class="bg-text">Experience</div>
+            <p class="experience-intro animate__animated animate__fadeInUp">
+                I focus on building products that feel fast, reliable, and thoughtfully engineered, with an emphasis on shipping work that improves both user experience and maintainability.
+            </p>
 
             <!-- Gumroad -->
             <div class="experience-card animate__animated animate__fadeInUp">
                 <div class="experience-header">
                 <div>
                     <h3>Software Engineer</h3>
-                    <h4>Gumroad · Freelance</h4>
+                    <h4>Gumroad · Open Source Contribution</h4>
+                    <div class="experience-tags">
+                        <span>React</span>
+                        <span>Ruby on Rails</span>
+                        <span>Inertia.js</span>
+                    </div>
                 </div>
                 <div class="experience-date">
-                    <span>Jul 2025 – Feb 2026 · 8 mos</span>
+                    <span>Jul 2025 – Feb 2026</span>
                 </div>
                 </div>
                 <div class="experience-content">
                 <p class="experience-location">Brooklyn, New York, United States · Remote</p>
                 <ul class="experience-list">
                     <li>
-                    Implemented <code>useFilesById</code> (memoized Map) to change file embed lookups
-                    from linear to constant time; cut ~90k comparisons to ~600 on large items and
-                    prevented content-page freezes.
+                    Reworked file embed lookups with a memoized <code>useFilesById</code> map, reducing large-item comparisons from roughly 90,000 to 600 and eliminating content-page freezes.
                     </li>
                     <li>
-                    Led Inertia.js migration of key pages (Library, Reviews, Wishlists, Audience),
-                    modernizing legacy Rails views into React-based SPA architecture.
+                    Led the Inertia.js migration of key surfaces including Library, Reviews, Wishlists, and Audience, moving legacy Rails views into a cleaner React-driven SPA flow.
                     </li>
                     <li>
-                    Integrated JWPlayer and migrated streaming pages to Inertia, improving video
-                    playback reliability and simplifying playback routing.
+                    Integrated JWPlayer and migrated streaming pages to Inertia, improving playback reliability while simplifying routing and page behavior.
                     </li>
                     <li>
-                    Improved international payout reliability by refining Stripe’s country support
-                    logic and gracefully handling unsupported regions.
+                    Strengthened international payout reliability by refining Stripe country support logic and handling unsupported regions more gracefully.
                     </li>
                     <li>
-                    Fixed race conditions and UX regressions: prevented cancelled S3 uploads from
-                    blocking product saves, resolved auto-scroll and search debouncing issues, and
-                    ensured URL/search state sync.
+                    Resolved race conditions and UX regressions across uploads, auto-scroll, debounced search, and URL state synchronization to make creator workflows more predictable.
                     </li>
                     <li>
-                    Delivered multiple bug fixes and UI refinements across checkout, product, and
-                    creator dashboards to improve stability and user experience.
-                    </li>
-                    <li>
-                    Collaborated with maintainers through structured code reviews.
+                    Shipped targeted fixes and UI refinements across checkout, product, and creator dashboards to improve day-to-day stability across the platform.
                     </li>
                 </ul>
                 </div>
@@ -281,15 +282,26 @@
                 <div class="experience-card animate__animated animate__fadeInUp">
                     <div class="experience-header">
                         <div>
-                            <h3>Full-Stack Developer</h3>
+                            <h3>Full Stack Developer</h3>
                             <h4>WNE3</h4>
+                            <div class="experience-tags">
+                                <span>React.js</span>
+                                <span>Django</span>
+                                <span>Cloud</span>
+                            </div>
                         </div>
                         <div class="experience-date">
-                            <span>May 2024 - Aug 2024</span>
+                            <span>May 2024 – Aug 2024</span>
                         </div>
                     </div>
                     <div class="experience-content">
-                        <p>As a Full-Stack Developer at WNE3, I've been entrusted with the responsibility of developing and maintaining both front-end and back-end solutions using React.js and Django. My role entails collaborating closely with cross-functional teams to ensure the seamless integration of features, optimize the user experience, and enhance system performance. Furthermore, I actively contribute to cloud-based solutions and assist in ensuring the scalability of applications to accommodate the growing demands of users.</p>
+                        <p class="experience-location">Remote</p>
+                        <ul class="experience-list">
+                            <li>Built and maintained end-to-end product features across the frontend and backend using React.js and Django.</li>
+                            <li>Worked closely with cross-functional teammates to integrate new functionality smoothly and improve the overall user experience.</li>
+                            <li>Contributed to performance, reliability, and scalability improvements, including support for cloud-based application workflows.</li>
+                            <li>Helped strengthen the engineering foundation of the product by balancing feature delivery with maintainable implementation.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -298,7 +310,7 @@
     <!-- Achievements Section -->
     <div class="section achievements-section">
         <div class="container">
-            <h2 class="section-title animate__animated animate__fadeIn">Achievements & Milestones</h2>
+            <h2 class="section-title animate__animated animate__fadeIn">Highlights</h2>
             <div class="bg-text">Success</div>
             
             <div class="achievements-grid">
@@ -307,8 +319,8 @@
                         <i class="fas fa-briefcase"></i>
                     </div>
                     <div class="achievement-number">10+</div>
-                    <div class="achievement-title">Freelance Projects</div>
-                    <div class="achievement-description">Successfully delivered diverse freelance projects across web development, mobile apps, and custom solutions for clients worldwide.</div>
+                    <div class="achievement-title">Projects Delivered</div>
+                    <div class="achievement-description">Shipped freelance work across web platforms, product builds, and custom solutions with a focus on reliability and real-world usability.</div>
                 </div>
                 
                 <div class="achievement-card animate__animated animate__fadeInUp animate__delay-1s">
@@ -316,17 +328,17 @@
                         <i class="fas fa-code"></i>
                     </div>
                     <div class="achievement-number">7+</div>
-                    <div class="achievement-title">Open Source Projects</div>
-                    <div class="achievement-description">Contributed to the developer community with innovative open-source projects spanning various technologies and domains.</div>
+                    <div class="achievement-title">Open Source Builds</div>
+                    <div class="achievement-description">Built and shared projects across different technologies, exploring ideas in developer tooling, web systems, and product engineering.</div>
                 </div>
                 
                 <div class="achievement-card animate__animated animate__fadeInUp animate__delay-2s">
                     <div class="achievement-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <div class="achievement-number">8.84</div>
+                    <div class="achievement-number">8.65</div>
                     <div class="achievement-title">Current CGPA</div>
-                    <div class="achievement-description">Maintaining excellence in academics while pursuing Computer Science & Engineering at Model Engineering College.</div>
+                    <div class="achievement-description">Maintaining strong academic performance while pursuing Computer Science & Engineering at Government Model Engineering College.</div>
                 </div>
             </div>
         </div>
@@ -335,36 +347,57 @@
     <!-- Tech Stack Section -->
     <div class="section tech-stack-section">
         <div class="container">
-            <h2 class="section-title animate__animated animate__fadeIn">Tech I'm Familiar With</h2>
+            <h2 class="section-title animate__animated animate__fadeIn">Core Stack</h2>
             <div class="bg-text">Tech Stack</div>
+            <p class="section-intro animate__animated animate__fadeInUp">The tools I use most often to build full-stack products, backend systems, and production-ready web experiences.</p>
             
             <div class="tech-grid">
                 <div class="tech-card animate__animated animate__fadeInUp">
                     <div class="tech-icon-container">
                         <img src="./icons/react.png" alt="React" class="tech-icon" />
                     </div>
-                    <h3>React.js</h3>
+                    <span class="tech-card-label">Frontend</span>
+                    <h3>React</h3>
                 </div>
                 
                 <div class="tech-card animate__animated animate__fadeInUp animate__delay-1s">
                     <div class="tech-icon-container">
-                        <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="Django" class="tech-icon" />
+                        <img src="./icons/python.png" alt="Python" class="tech-icon" />
                     </div>
-                    <h3>Django</h3>
+                    <span class="tech-card-label">Language</span>
+                    <h3>Python</h3>
                 </div>
                 
                 <div class="tech-card animate__animated animate__fadeInUp animate__delay-2s">
                     <div class="tech-icon-container">
-                        <img src="./icons/github.png" alt="GitHub" class="tech-icon" />
+                        <img src="./icons/js.png" alt="JavaScript" class="tech-icon" />
                     </div>
-                    <h3>GitHub</h3>
+                    <span class="tech-card-label">Language</span>
+                    <h3>JavaScript</h3>
                 </div>
                 
                 <div class="tech-card animate__animated animate__fadeInUp animate__delay-3s">
                     <div class="tech-icon-container">
-                        <img src="./icons/db.png" alt="Databases" class="tech-icon" />
+                        <img src="./icons/dj.png" alt="Django" class="tech-icon" />
                     </div>
-                    <h3>Databases</h3>
+                    <span class="tech-card-label">Backend</span>
+                    <h3>Django</h3>
+                </div>
+
+                <div class="tech-card animate__animated animate__fadeInUp">
+                    <div class="tech-icon-container">
+                        <img src="./icons/docker.png" alt="Docker" class="tech-icon" />
+                    </div>
+                    <span class="tech-card-label">Infrastructure</span>
+                    <h3>Docker</h3>
+                </div>
+
+                <div class="tech-card animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="tech-icon-container">
+                        <img src="./icons/db.png" alt="PostgreSQL" class="tech-icon" />
+                    </div>
+                    <span class="tech-card-label">Database</span>
+                    <h3>PostgreSQL</h3>
                 </div>
             </div>
         </div>
@@ -375,17 +408,20 @@
         <div class="container">
             <h2 class="section-title animate__animated animate__fadeIn">Education</h2>
             <div class="bg-text">Academics</div>
+            <p class="section-intro animate__animated animate__fadeInUp">A strong academic foundation shaped by consistent performance across engineering, higher secondary, and school-level study.</p>
             
             <div class="timeline">
                 <div class="timeline-item animate__animated animate__fadeInUp">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3>Bachelor's Degree in Computer Science & Engineering</h3>
-                            <span class="timeline-date">2023 - 2027</span>
+                            <h3>B.Tech in Computer Science & Engineering</h3>
+                            <span class="timeline-date">2023 – 2027</span>
                         </div>
                         <h4>Government Model Engineering College</h4>
-                        <p>8.84 CGPA</p>
+                        <div class="timeline-metrics">
+                            <span>Current CGPA: 8.65</span>
+                        </div>
                     </div>
                 </div>
                 
@@ -394,9 +430,14 @@
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <h3>Higher Secondary</h3>
-                            <span class="timeline-date">2021 - 2023</span>
+                            <span class="timeline-date">2021 – 2023</span>
                         </div>
-                        <h4>SNDPHSS</h4>
+                        <h4>S.N.D.P Higher Secondary School</h4>
+                        <div class="timeline-metrics">
+                            <span>State Board</span>
+                            <span>12th Grade</span>
+                            <span>98.7%</span>
+                        </div>
                     </div>
                 </div>
                 
@@ -405,9 +446,14 @@
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <h3>High School</h3>
-                            <span class="timeline-date">2011 - 2021</span>
+                            <span class="timeline-date">2011 – 2021</span>
                         </div>
                         <h4>Bhavan Munshi Vidyashram</h4>
+                        <div class="timeline-metrics">
+                            <span>CBSE</span>
+                            <span>10th Grade</span>
+                            <span>92.2%</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -434,7 +480,7 @@
                 <img id="footerLogo" src="../imgg/logoBlack.svg" loading="lazy" alt="Arjun Ajith Logo" class="brand-pic" style="margin-bottom: 1rem;" />
                 <p>Computer Science student at MEC Thrikkakara. Developer, designer, and tech enthusiast passionate about creating innovative solutions.</p>
                 <div class="copyright">
-                    <p>© 2024 Arjun Ajith. All rights reserved.</p>
+                    <p>© <span id="currentYear"></span> Arjun Ajith. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -448,6 +494,11 @@
     <script>
         // Check dark mode on load
         document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = document.getElementById('currentYear');
+            if (currentYear) {
+                currentYear.textContent = new Date().getFullYear();
+            }
+
             const darkModePref = localStorage.getItem('darkMode');
             if (darkModePref === 'true') {
                 document.body.classList.add('dark-mode');
