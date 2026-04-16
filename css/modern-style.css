@@ -667,10 +667,6 @@ body.dark-mode .nav-link.active .nav-link-text {
   color: var(--primary-light);
 }
 
-.nav-link.active .link-underline {
-  width: 100%;
-}
-
 /* Menu Button */
 .menu-button {
   display: none;

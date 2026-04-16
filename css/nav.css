@@ -70,8 +70,7 @@
   transition: width 0.3s ease;
 }
 
-.nav-link:hover .link-underline,
-.nav-link.active .link-underline {
+.nav-link:hover .link-underline {
   width: 100%;
 }
 
