@@ -61,30 +61,6 @@
       });
     </script>
     
-    <!-- Dark Mode Toggle -->
-    <script type="text/javascript">
-      function toggleDarkMode() {
-        var element = document.body;
-        element.classList.toggle("dark-mode");
-
-        document.getElementById("logoImage").src = element.classList.contains("dark-mode") ? "../imgg/logoWhite.svg" : "../imgg/logoBlack.svg";
-        document.getElementById("menu-button").src = element.classList.contains("dark-mode") ? "../imgg/menu-icon-white.svg" : "../imgg/menu-icon-black.svg";
-
-        var bg = document.getElementsByClassName("nav-bg-white");
-        bg[0]?.classList.toggle("nav-bg-white");
-
-        // Save preference to localStorage
-        localStorage.setItem('darkMode', element.classList.contains("dark-mode"));
-      }
-
-      // Check for saved dark mode preference on page load
-      document.addEventListener('DOMContentLoaded', function() {
-        const darkModePref = localStorage.getItem('darkMode');
-        if (darkModePref === 'true') {
-          document.body.classList.add('dark-mode');
-        }
-      });
-    </script>
   </head>
 
   <body>
@@ -92,7 +68,7 @@
     <div data-collapse="small" data-animation="default" class="fixed-nav w-nav">
       <div class="container nav-container w-container">
         <label class="switch">
-          <input type="checkbox" onclick="toggleDarkMode()">
+          <input type="checkbox" data-theme-toggle>
           <span class="slider round"></span>
         </label>
         
@@ -124,7 +100,8 @@
         </nav>
         
         <div class="menu-button w-nav-button">
-          <img id="menu-button" src="../imgg/menu-icon-black.svg" loading="lazy" alt="" />
+          <img id="menu-button" src="../imgg/menu-icon-black.svg" data-light-src="../imgg/menu-icon-black.svg"
+            data-dark-src="../imgg/menu-icon-white.svg" loading="lazy" alt="" />
         </div>
       </div>
       <div class="nav-bg-white"></div>
@@ -450,7 +427,8 @@
       <div class="container">
         <div class="footer-flex-container">
           <div class="footer-flex-first">
-            <img id="logoImage" src="../imgg/logoBlack.svg" loading="lazy" alt="Arjun Ajith Logo" class="brand-pic" style="margin-bottom: 1rem;" />
+            <img id="logoImage" src="../imgg/logoBlack.svg" data-light-src="../imgg/logoBlack.svg"
+              data-dark-src="../imgg/logoWhite.svg" loading="lazy" alt="Arjun Ajith Logo" class="brand-pic" style="margin-bottom: 1rem;" />
             <p>Computer Science student at MEC Thrikkakara. Developer, designer, and tech enthusiast passionate about creating innovative solutions.</p>
           </div>
          
@@ -469,59 +447,8 @@
       </div>
     </div>
 
-    <!-- Add this to handle mobile menu toggle -->
-    <script>
-      // Mobile menu toggle
-      document.addEventListener('DOMContentLoaded', function() {
-        const menuButton = document.querySelector('.menu-button');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        if (menuButton && navMenu) {
-          menuButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            navMenu.classList.toggle('w--open');
-            
-            // Close menu when clicking outside
-            document.addEventListener('click', function(event) {
-              const isClickInside = navMenu.contains(event.target) || 
-                                  menuButton.contains(event.target);
-              if (!isClickInside && navMenu.classList.contains('w--open')) {
-                navMenu.classList.remove('w--open');
-              }
-            });
-          });
-
-          // Close menu when window is resized
-          window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-              navMenu.classList.remove('w--open');
-            }
-          });
-
-          // Close menu when escape key is pressed
-          document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && navMenu.classList.contains('w--open')) {
-              navMenu.classList.remove('w--open');
-            }
-          });
-        }
-        
-        // Check dark mode on load
-        const darkModePref = localStorage.getItem('darkMode');
-        if (darkModePref === 'true') {
-          document.body.classList.add('dark-mode');
-          const darkModeToggle = document.querySelector('.switch input');
-          if (darkModeToggle) darkModeToggle.checked = true;
-          
-          // Update logo and menu button
-          const logoImage = document.getElementById("logoImage");
-          const menuButtonImg = document.getElementById("menu-button");
-          if (logoImage) logoImage.src = "../imgg/logoWhite.svg";
-          if (menuButtonImg) menuButtonImg.src = "../imgg/menu-icon-white.svg";
-        }
-      });
-    </script>
+    <script src="../js/theme.js" type="text/javascript"></script>
+    <script src="../js/nav.js" type="text/javascript"></script>
 
     <div class="cursor">
       <div class="cursor-big-circle"></div>
