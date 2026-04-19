@@ -125,6 +125,36 @@
         <div class="project-card animate__animated animate__fadeInUp">
           <div class="project-header">
             <div class="project-title-container">
+              <h2 class="project-title">Stock Market Automator</h2>
+              <div class="project-tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Google Sheets API</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <ul class="project-details">
+              <li>
+                Built an automated stock screening workflow to surface high-conviction trade opportunities across Nifty 50 stocks.
+              </li>
+              <li>
+                Detected golden crossover setups by identifying cases where the 50-day moving average crossed above the 200-day moving average with strong volume confirmation.
+              </li>
+              <li>
+                Focused the first version on Nifty 50 companies to keep the system simple, reliable, and easier to validate before scaling further.
+              </li>
+              <li>
+                Automatically logged every qualifying stock to Google Sheets, creating a lightweight signal dashboard for tracking crossover events in real time.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card animate__animated animate__fadeInUp">
+          <div class="project-header">
+            <div class="project-title-container">
               <h2 class="project-title"><a href="https://amppay.vercel.app/" target="_blank">AmpPay</a></h2>
               <div class="project-tech-stack">
                 <span class="tech-tag">React</span>
@@ -170,7 +200,7 @@
           </div>
         </div>
 
-        <!-- Project 2 -->
+        <!-- Project 3 -->
         <div class="project-card animate__animated animate__fadeInUp">
           <div class="project-header">
             <div class="project-title-container">
@@ -208,7 +238,7 @@
           </div>
         </div>
 
-        <!-- Project 3 -->
+        <!-- Project 4 -->
         <div class="project-card animate__animated animate__fadeInUp">
           <div class="project-header">
             <div class="project-title-container">
@@ -246,7 +276,7 @@
           </div>
         </div>
 
-        <!-- Project 4 -->
+        <!-- Project 5 -->
         <div class="project-card animate__animated animate__fadeInUp">
           <div class="project-header">
             <div class="project-title-container">
@@ -285,7 +315,7 @@
           </div>
         </div>
 
-        <!-- Project 5 -->
+        <!-- Project 6 -->
         <div class="project-card animate__animated animate__fadeInUp">
           <div class="project-header">
             <div class="project-title-container">
@@ -322,7 +352,7 @@
           </div>
         </div>
 
-        <!-- Project 6 -->
+        <!-- Project 7 -->
         <div class="project-card animate__animated animate__fadeInUp">
           <div class="project-header">
             <div class="project-title-container">
@@ -366,7 +396,7 @@
           </div>
         </div>
 
-        <!-- Project 7 -->
+        <!-- Project 8 -->
         <div class="project-card animate__animated animate__fadeInUp">
           <div class="project-header">
             <div class="project-title-container">
@@ -442,13 +472,16 @@
           </div>
         </div>
         <div style="margin-top: 3rem; text-align: center; color: var(--text-muted);">
-          <p>© 2024 Arjun Ajith. All rights reserved.</p>
+          <p>© <span id="currentYear"></span> Arjun Ajith. All rights reserved.</p>
         </div>
       </div>
     </div>
 
     <script src="../js/theme.js" type="text/javascript"></script>
     <script src="../js/nav.js" type="text/javascript"></script>
+    <script>
+      document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
 
     <div class="cursor">
       <div class="cursor-big-circle"></div>
