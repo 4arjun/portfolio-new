@@ -5,7 +5,7 @@ Allow: /
 Allow: /index.html
 Allow: /about/
 Allow: /resume/
-Allow: /projects/
+Allow: /about/projects.html
 
 # Allow favicon and logo files for search engines
 Allow: /imgg/favicon-48x48.png
