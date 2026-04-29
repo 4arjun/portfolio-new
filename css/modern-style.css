@@ -515,7 +515,6 @@ body.dark-mode .footer-link:hover {
   z-index: 9999;
   mix-blend-mode: difference;
 }
-
 .cursor-small-circle {
   position: fixed;
   width: 8px;
