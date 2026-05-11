@@ -1,35 +1,4 @@
 User-agent: *
 Allow: /
 
-# Important pages
-Allow: /index.html
-Allow: /about/
-Allow: /resume/
-Allow: /about/projects.html
-
-# Allow favicon and logo files for search engines
-Allow: /imgg/favicon-48x48.png
-Allow: /imgg/favicon-96x96.png
-Allow: /imgg/favicon-192x192.png
-Allow: /imgg/logoBlack.svg
-Allow: /imgg/logoWhite.svg
-Allow: /imgg/pp.jpg
-
-# Block other unnecessary files but allow essential images
-Disallow: /css/
-Disallow: /js/
-Disallow: /imgg/*.jpg$
-Disallow: /imgg/*.png$
-Allow: /imgg/favicon-48x48.png
-Allow: /imgg/favicon-96x96.png
-Allow: /imgg/favicon-192x192.png
-Allow: /imgg/logoBlack.svg
-Allow: /imgg/logoWhite.svg
-Allow: /imgg/pp.jpg
-Disallow: *.pdf$
-
-# Sitemap location
 Sitemap: https://www.arjunajith.me/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1 
