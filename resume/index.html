@@ -41,11 +41,103 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../imgg/logoBlack.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="../imgg/logoBlack.svg" />
-    
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100dvh;
+        background: #0f172a;
+        color: #f8fafc;
+        font-family: Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .resume-toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.85rem 1rem;
+        background: #020617;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .resume-title {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .resume-actions {
+        display: flex;
+        gap: 0.6rem;
+      }
+
+      .resume-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 2.35rem;
+        padding: 0.6rem 0.9rem;
+        border-radius: 999px;
+        background: #ffffff;
+        color: #020617;
+        font-size: 0.9rem;
+        font-weight: 800;
+        line-height: 1;
+        text-decoration: none;
+      }
+
+      .resume-frame {
+        display: block;
+        flex: 1 1 auto;
+        width: 100%;
+        min-height: 0;
+        border: 0;
+        background: #111827;
+      }
+
+      @media (max-width: 520px) {
+        .resume-toolbar {
+          align-items: stretch;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+
+        .resume-actions {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .resume-action {
+          min-height: 2.5rem;
+          padding: 0.7rem 0.75rem;
+        }
+
+      }
+    </style>
     
   </head>
   <body>
-    <iframe src="resume.pdf" width="100%" height="1200px">
+    <header class="resume-toolbar">
+      <h1 class="resume-title">Arjun Ajith Resume</h1>
+      <div class="resume-actions">
+        <a class="resume-action" href="resume.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>
+        <a class="resume-action" href="resume.pdf" download>Download</a>
+      </div>
+    </header>
+    <iframe class="resume-frame" src="resume.pdf" title="Arjun Ajith Resume PDF">
+      <a href="resume.pdf">Open Arjun Ajith's resume PDF</a>
     </iframe>
   </body>
 </html>
