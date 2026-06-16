@@ -968,6 +968,10 @@ body.about-page.dark-mode .copyright {
   .about-page .timeline {
     gap: 1rem;
   }
+
+  .about-page .footer {
+    padding: 2rem 0 1rem;
+  }
 }
 
 @media (max-width: 479px) {

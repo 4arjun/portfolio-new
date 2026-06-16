@@ -208,6 +208,7 @@ body.dark-mode .nav-menu {
 @media (max-width: 768px) {
   .nav-container {
     padding: 0 1rem;
+    min-height: 40px;
   }
 
   .nav-right-container {
@@ -217,7 +218,9 @@ body.dark-mode .nav-menu {
   .menu-button {
     display: block;
     position: absolute;
+    top: 50%;
     right: 1rem;
+    transform: translateY(-50%);
   }
 
   .nav-menu {
@@ -244,6 +247,15 @@ body.dark-mode .nav-menu {
     opacity: 1;
     visibility: visible;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  body.dark-mode .nav-menu.w--open {
+    background-color: rgba(2, 6, 23, 0.96) !important;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+  }
+
+  body.dark-mode .nav-menu.w--open .nav-link {
+    color: var(--dark-text);
   }
 
   .nav-link {
