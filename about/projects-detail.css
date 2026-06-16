@@ -229,6 +229,95 @@ body.dark-mode .project-link-icon {
   transform: translateY(-2px);
 }
 
+/* Projects Footer */
+.projects-page .footer {
+  padding: 3rem 0 2rem;
+  background: var(--light-bg);
+  border-top: 1px solid var(--border-light);
+}
+
+.projects-page .footer .container {
+  max-width: 1180px;
+}
+
+.projects-page .footer-flex-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(10rem, auto);
+  align-items: start;
+  gap: 3rem;
+  margin: 0;
+}
+
+.projects-page .footer-flex-first {
+  max-width: 760px;
+  min-width: 0;
+}
+
+.projects-page .footer .brand-pic {
+  display: block;
+  width: 3rem;
+  height: auto;
+  margin-bottom: 1rem !important;
+}
+
+.projects-page .footer p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.projects-page .projects-footer-connect {
+  min-width: 10rem;
+}
+
+.projects-page .projects-footer-connect h4 {
+  margin: 0 0 1rem;
+  color: var(--text-color);
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.projects-page .footer-link {
+  width: fit-content;
+  margin-bottom: 0.65rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.projects-page .projects-footer-copyright {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+  text-align: center;
+}
+
+.projects-page .projects-footer-copyright p {
+  max-width: none;
+  font-size: 0.95rem;
+}
+
+body.dark-mode.projects-page .footer {
+  background: var(--dark-bg);
+  border-top-color: var(--border-dark);
+}
+
+body.dark-mode.projects-page .projects-footer-connect h4 {
+  color: var(--dark-text);
+}
+
+body.dark-mode.projects-page .footer p,
+body.dark-mode.projects-page .footer-link {
+  color: var(--dark-text-muted);
+}
+
+body.dark-mode.projects-page .projects-footer-copyright {
+  border-top-color: var(--border-dark);
+}
+
 /* Active Navigation Link */
 
 /* Responsive Styles */
@@ -247,6 +336,10 @@ body.dark-mode .project-link-icon {
   
   .project-links {
     margin-top: 1rem;
+  }
+
+  .projects-page .footer-flex-container {
+    gap: 2rem;
   }
 }
 
@@ -269,6 +362,23 @@ body.dark-mode .project-link-icon {
   
   .cta-content h2 {
     font-size: 2rem;
+  }
+
+  .projects-page .footer {
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .projects-page .footer-flex-container {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-page .projects-footer-connect {
+    min-width: 0;
+  }
+
+  .projects-page .projects-footer-copyright {
+    margin-top: 1.5rem;
+    text-align: left;
   }
 }
 
