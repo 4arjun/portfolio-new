@@ -17,4 +17,4 @@ This browser application allows users to navigate through the whole content.
 
 - [LinkedIn](https://www.linkedin.com/in/4arjun/)
 - [Twitter](www.linkedin.com/in/4arjun)
-- [Instagram](https://www.instagram.com/arjunajith__/)
+<!-- - [Instagram](https://www.instagram.com/arjunajith__/) -->
